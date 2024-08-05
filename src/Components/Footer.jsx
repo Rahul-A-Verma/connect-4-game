@@ -5,20 +5,20 @@ import { game_state_playing } from "../Constant";
 
 const Footer = ({ onClickNewbtn, onClickSuggestbtn, gameState }) => {
 
-  const renderBtn = () => {
-    if (gameState === game_state_playing) {
-      return <button onClick={onClickSuggestbtn}>Suggest</button>
-    }
-    return <button onClick={onClickNewbtn}>New Game</button>
-  }
+  // const renderBtn = () => {
+  //   if (gameState === game_state_playing) {
+  //     return <button onClick={onClickSuggestbtn}>Suggest</button>
+  //   }
+  //   return <button onClick={onClickNewbtn}>New Game</button>
+  // }
 
   return (
     // 1st way----------
 
-    // <div className='footer'>
-    //     <button onClick={onClickNewbtn}>New Game</button>
-    //     <button onClick={onClickSuggestbtn}>Suggest</button>
-    // </div>
+    <div className='footer'>
+        <button onClick={onClickNewbtn}>New Game</button>
+        <button onClick={onClickSuggestbtn}>Suggest</button>
+    </div>
 
     // 2nd way-------------
 
@@ -32,9 +32,9 @@ const Footer = ({ onClickNewbtn, onClickSuggestbtn, gameState }) => {
     // </div>
 
     // 3rd way--------------------
-    <div className='footer'>
-      {renderBtn()}
-    </div>
+    // <div className='footer'>
+    //   {renderBtn()}
+    // </div>
 
   )
 }
